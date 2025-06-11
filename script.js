@@ -36,3 +36,17 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// uso foreach e innerhtml per mostrare i dati base
+
+const teamContainer = document.getElementById('team-container');
+
+teamMembers.forEach(member => {
+    const card = document.createElement('div');
+    card.innerHTML = `
+        <h3>${member.name}</h3>
+        <p>${member.role}</p>
+        <p>${member.email}</p>
+    `;
+    teamContainer.appendChild(card);
+});
