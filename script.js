@@ -43,7 +43,9 @@ const teamContainer = document.getElementById('team-container');
 
 teamMembers.forEach(member => {
     const card = document.createElement('div');
-    card.innerHTML = `
+    card.innerHTML = 
+    // fix aggiungo le immagini 
+    ` <img src="${member.img}" alt="${member.name}">
         <h3>${member.name}</h3>
         <p>${member.role}</p>
         <p>${member.email}</p>
